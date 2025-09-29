@@ -1,2 +1,6 @@
-fdkjhjjshj
-shjhsy cjhhelloooooo
+heelllooo 
+
+jenkins triggers
+build-periodically like crontab * * * * * 
+poll scm - when there is any changes is your hithub triggers periodically check the changes and build job
+webhooks - any changes in github the only build triggers

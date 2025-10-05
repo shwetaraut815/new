@@ -22,7 +22,7 @@ pipeline{
 		}
 		stage ("upload s3"){
 		    steps {
-				sh " aws s3 rb s3://war-deploy-3573"
+				
 			   sh "aws s3 mb s3://war-deploy-3573"
 			   sh "aws s3 cp target/LoginWebApp.war s3://war-deploy-3573"
 			}

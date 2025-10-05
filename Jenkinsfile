@@ -10,8 +10,7 @@ pipeline{
 	 stages{
 	    stage ("git pull") {
 		    steps {
-			  git branch: "master", 
-			  url: "https://github.com/shwetaraut815/project.git"
+			  git branch: "master", url: "https://github.com/shwetaraut815/project.git"
 			  
 			}
 		}

@@ -24,7 +24,7 @@ pipeline{
 		    steps {
 				
 			   sh "aws s3 mb s3://war-deploy-3573"
-			   sh "aws s3 cp target/LoginWebApp.war s3://war-deploy-3573"
+			   sh "sudo aws s3 cp target/LoginWebApp.war s3://war-deploy-3573"
 			}
 		}
 		 stage ("get war"){
@@ -35,7 +35,7 @@ pipeline{
 			 }
 			  steps {
 			    dir ("/mnt/server/apache-tomcat-10.1.46/webapps"){
-			    sh "aws s3 cp s3://war-deploy-3573/LoginWebApp.war ."
+			    sh "sudo aws s3 cp s3://war-deploy-3573/LoginWebApp.war ."
 				}
 			  } 
 		 }

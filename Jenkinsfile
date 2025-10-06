@@ -39,10 +39,6 @@ pipeline{
 				}
 			  } 
 		 }
-	     stage ("clean"){
-		     steps {
-			    sh "rm -rf /mnt/server/apache-tomcat-10.1.46/webapps"
-			 }
-		 }	 
+	     
 	 }
 }

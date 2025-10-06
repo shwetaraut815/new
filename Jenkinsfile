@@ -6,6 +6,10 @@ pipeline{
 		}
 
 	 }
+	
+    tools {
+        maven 'Maven3'   // 👈 Configure this in Jenkins Tools before running
+    }
 	 
 	 stages{
 	    stage ("git pull") {
@@ -38,7 +42,13 @@ pipeline{
 			    sh "sudo aws s3 cp s3://war-deploy-3573/LoginWebApp.war ."
 				}
 			  } 
+			 stage('Clean Old WAR') {
+            steps {
+                sh "rm -f ${TOMCAT_PATH}/LoginWebApp.war"
+            }
+        }
 		 }
+		 
 	     
 	 }
 }
